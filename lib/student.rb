@@ -54,7 +54,7 @@ class Student
     sql = <<-SQL
     SELECT name FROM students LIMIT 1
     SQL
-    DB[:conn].execute(sql, name)
+    DB[:conn].execute(sql, self.name)
   end
 
   def update
