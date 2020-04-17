@@ -56,7 +56,8 @@ class Student
     SQL
     DB[:conn].execute(sql, self.name).map do |row|
       self.new_from_db(row)
-    end.first
+      self
+    end
   end
 
   def update
